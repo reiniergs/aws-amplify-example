@@ -24,7 +24,7 @@ export default function SignIn(props) {
     }
 
     return (
-        <section className={getClassName()} style={style} >
+        <section className={getClassName()} style={style}>
             <Link to="/home">
                 <img src="assets/rainbow-logo.svg" alt="rainbow logo" className="aws-amplify-app-signin_image" />
             </Link>    
@@ -62,7 +62,7 @@ export default function SignIn(props) {
                     </a>
                 </article>
             </Card>
-            <Link className="aws-amplify-app-signin_link" to="/signup">Sign Up</Link>
+            <Link className="aws-amplify-app-signin_link" to="/signup">Sign up?</Link>
         </section>
     );
 }
