@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 16px;
+    padding-top: 16px;
     height: 100vh;
 }
 
 .aws-amplify-app-signin_image {
     height: 40px;
     width: 40px;
-    padding-top: 16px;
 }
 
 .aws-amplify-app-signin_header {
@@ -37,7 +38,7 @@
 }
 
 .aws-amplify-app-signin_social-buttons-container > :not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .aws-amplify-app-signin_inputs-container {
@@ -57,26 +58,31 @@
 }
 
 .aws-amplify-app-signin_social-icon {
-    margin-right: 24px;
+    position: absolute;
+    left: 16px;
 }
 
 .aws-amplify-app-signin_facebook-button {
     background-color: #004ca9;
+    border-color: #004ca9;
     color: #fff;
 }
 
 .aws-amplify-app-signin_facebook-button:hover {
     background-color: #023a7e;
+    border-color: #023a7e;
     color: #fff;
 }
 
 .aws-amplify-app-signin_twitter-button {
     background-color: #00b0f3;
+    border-color: #00b0f3;
     color: #fff;
 }
 
 .aws-amplify-app-signin_twitter-button:hover {
     background-color: #009acf;
+    border-color: #009acf;
     color: #fff;
 }
 

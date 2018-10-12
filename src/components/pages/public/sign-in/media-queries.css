@@ -1,4 +1,7 @@
 @media (max-width: 650px) {
+    .aws-amplify-app-signin_container {
+        height: 100%;
+    }
     .aws-amplify-app-signin_card {
         width: 100%;
         border-radius: 0;
@@ -16,5 +19,9 @@
     .aws-amplify-app-signin_header {
         font-size: 20px;
         margin: 8px 0 12px 0;
+    }
+    .aws-amplify-app-signin_image {
+        height: 32px;
+        width: 32px;
     }
 }
