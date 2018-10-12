@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function SignIn(props) {
     const {
@@ -8,7 +9,8 @@ export default function SignIn(props) {
     } = props;
     return (
         <div className={className} style={style} >
-            Sign In!
+            <p>Sign In!</p>
+            <Link to="/signup">Sign Up</Link>
         </div>
     );
 }

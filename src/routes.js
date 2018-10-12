@@ -1,23 +1,22 @@
 import React from 'react';
 import {
     Router,
-    Route,
     Redirect,
     Switch,
 } from 'react-router-dom';
 import history from './history';
-import AuthRoute from './components/auth-route';
-import PublicRoute from './components/public-route';
-import SignIn from './components/sign-in';
-import AuthApp from './components/auth-app';
+import AuthRoute from './components/experiences/auth-route';
+import PublicRoute from './components/experiences/public-route';
+import PublicRoutes from './components/pages/public';
+import AuthApp from './components/pages/auth';
 
 export default function Routes({ isAuth }) {
     return (
         <Router history={history}>
             <div>
                 <Switch>
-                    <Redirect from="/" exact to="/home"/>
-                    <PublicRoute component={SignIn} isAuth={isAuth} />
+                    <Redirect from="/" exact to="/signin"/>
+                    <PublicRoute component={PublicRoutes} isAuth={isAuth} />
                     <AuthRoute component={AuthApp} isAuth={isAuth} />
                 </Switch>
             </div>
