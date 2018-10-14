@@ -47,7 +47,7 @@ export default function Verification(props) {
                         type="number"
                         required
                         icon={<KeysIcon />} />
-                    <Button variant="brand" label="Login" />
+                    <Button variant="brand" label="Confirm" />
                     <p className="aws-amplify-app-verify-account_no-code">
                         No code?
                     </p>
