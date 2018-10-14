@@ -13,7 +13,11 @@ export default function startApp() {
     return (dispatch) => {
         dispatch(initApp());
         authStateChanged()
-            .then(user => dispatch(authenticate(user)))
-            .catch(() => dispatch(unauthenticate()));
+            .then(user => {
+                dispatch(authenticate(user));
+            })
+            .catch(() => {
+                dispatch(unauthenticate())
+            });
     }
 }

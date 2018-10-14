@@ -15,9 +15,9 @@ export default function Routes({ isAuth }) {
         <Router history={history}>
             <div>
                 <Switch>
-                    <Redirect from="/" exact to="/signin"/>
-                    <PublicRoute component={PublicRoutes} isAuth={isAuth} />
-                    <AuthRoute component={AuthApp} isAuth={isAuth} />
+                    <Redirect from="/" exact to="/home"/>
+                    <PublicRoute path="/home" component={PublicRoutes} isAuth={isAuth} />
+                    <AuthRoute path="/app/home" component={AuthApp} isAuth={isAuth} />
                 </Switch>
             </div>
         </Router>

@@ -2,18 +2,18 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Card from 'react-rainbow-components/components/Card';
 import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
-import FacebookIcon from './icons/facebookIcon';
-import GoogleIcon from './icons/googleIcon';
-import TwitterIcon from './icons/twitterIcon';
-import EmailIcon from './icons/emailIcon';
-import LockIcon from './icons/lockIcon';
+import EmailIcon from '../../../experiences/social-login/icons/emailIcon';
+import LockIcon from '../../../experiences/social-login/icons/lockIcon';
 import './styles.css';
 import './media-queries.css';
+import SocialLogin from './../../../experiences/social-login';
 
-export default function SignIn(props) {
+function SignIn(props) {
     const {
         className,
         style,
@@ -26,24 +26,11 @@ export default function SignIn(props) {
     return (
         <section className={getClassName()} style={style}>
             <Link to="/home">
-                <img src="assets/rainbow-logo.svg" alt="rainbow logo" className="aws-amplify-app-signin_image" />
+                <img src="/assets/rainbow-logo.svg" alt="rainbow logo" className="aws-amplify-app-signin_image" />
             </Link>    
             <p className="aws-amplify-app-signin_header">Sign in</p>
             <Card className="aws-amplify-app-signin_card">
-                <article className="aws-amplify-app-signin_social-buttons-container">
-                    <Button className="aws-amplify-app-signin_facebook-button">
-                        <FacebookIcon className="aws-amplify-app-signin_social-icon" />
-                        Login with Facebook
-                    </Button>
-                    <Button variant="neutral">
-                        <GoogleIcon className="aws-amplify-app-signin_social-icon" />
-                        Login with Google
-                    </Button>
-                    <Button className="aws-amplify-app-signin_twitter-button">
-                        <TwitterIcon className="aws-amplify-app-signin_social-icon" />
-                        Login with Twitter
-                    </Button>
-                </article>
+                <SocialLogin />
                 <article className="aws-amplify-app-signin_inputs-container">
                     <Input
                         label="Email Address"
@@ -62,7 +49,7 @@ export default function SignIn(props) {
                     </a>
                 </article>
             </Card>
-            <Link className="aws-amplify-app-signin_link" to="/signup">Sign up?</Link>
+            <Link className="aws-amplify-app-signin_link" to="/home/signup">Sign up?</Link>
         </section>
     );
 }
@@ -76,3 +63,17 @@ SignIn.defaultProps = {
     className: undefined,
     style: {},
 };
+
+function stateToProps(state) {
+    return {
+
+    }
+}
+
+function dispatchToProps(dispatch) {
+    return bindActionCreators({
+
+    }, dispatch);
+}
+
+export default connect(stateToProps, dispatchToProps)(SignIn);

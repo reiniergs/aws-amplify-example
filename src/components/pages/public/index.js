@@ -1,7 +1,8 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import SignIn from './sign-in';
 import SignUp from './sign-up';
+import Verification from './verification';
 
 export default function PublicRoutes(props) {
     const {
@@ -10,8 +11,10 @@ export default function PublicRoutes(props) {
     } = props;
     return (
         <Switch className={className} style={style} >
-            <Route path="/signin" component={SignIn} />
-            <Route path="/signup" component={SignUp} />
+            <Redirect from="/home" exact to="/home/signin" />
+            <Route path="/home/signin" component={SignIn} />
+            <Route path="/home/signup" component={SignUp} />
+            <Route path="/home/verification" component={Verification} />
         </Switch>
     );
 }

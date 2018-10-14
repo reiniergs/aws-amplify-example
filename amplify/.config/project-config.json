@@ -1,7 +1,7 @@
 {
     "projectName": "awsamplifyweb",
     "projectPath": "/Users/reinierguerra/projects/aws-amplify-web",
-    "defaultEditor": "idea14ce",
+    "defaultEditor": "none",
     "frontendHandler": {
         "javascript": "/Users/reinierguerra/.nvm/versions/node/v9.10.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-frontend-javascript"
     },
