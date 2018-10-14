@@ -6,7 +6,7 @@ import Card from 'react-rainbow-components/components/Card';
 import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
 import UserIcon from './icons/userIcon';
-import LockIcon from './icons/lockIcon';
+import KeysIcon from './icons/keysIcon';
 import BackIcon from './icons/backIcon';
 import './styles.css';
 import './media-queries.css';
@@ -46,7 +46,7 @@ export default function Verification(props) {
                         placeholder="Enter the verification code"
                         type="number"
                         required
-                        icon={<LockIcon />} />
+                        icon={<KeysIcon />} />
                     <Button variant="brand" label="Login" />
                     <p className="aws-amplify-app-verify-account_no-code">
                         No code?
