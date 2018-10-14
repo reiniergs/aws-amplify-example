@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 import Card from 'react-rainbow-components/components/Card';
 import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
-import EmailIcon from './icons/emailIcon';
+import UserIcon from './icons/userIcon';
 import LockIcon from './icons/lockIcon';
 import SocialLogin from './../../../experiences/social-login';
 import './styles.css';
@@ -33,10 +33,10 @@ function SignIn(props) {
                 <SocialLogin />
                 <article className="aws-amplify-app-signin_inputs-container">
                     <Input
-                        label="Email Address"
+                        label="Username"
                         required
-                        placeholder="Enter your email address"
-                        icon={<EmailIcon />} />
+                        placeholder="Enter your username"
+                        icon={<UserIcon />} />
                     <Input
                         label="Password"
                         placeholder="Enter your password"
