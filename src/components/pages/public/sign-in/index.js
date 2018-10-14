@@ -9,9 +9,9 @@ import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
 import EmailIcon from '../../../experiences/social-login/icons/emailIcon';
 import LockIcon from '../../../experiences/social-login/icons/lockIcon';
+import SocialLogin from './../../../experiences/social-login';
 import './styles.css';
 import './media-queries.css';
-import SocialLogin from './../../../experiences/social-login';
 
 function SignIn(props) {
     const {

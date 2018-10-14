@@ -7,25 +7,20 @@ import { bindActionCreators } from 'redux';
 import Card from 'react-rainbow-components/components/Card';
 import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
-import CheckboxGroup from 'react-rainbow-components/components/CheckboxGroup';
 import SocialLogin from './../../../experiences/social-login';
 import EmailIcon from './icons/emailIcon';
 import LockIcon from './icons/lockIcon';
 import UserIcon from './icons/userIcon';
-import './styles.css';
-import './media-queries.css';
 import signup from './../../../../redux/actions/signup';
 import history from './../../../../history';
+import './styles.css';
+import './media-queries.css';
 
 function SignUp(props) {
     const {
         className,
         style,
     } = props;
-
-    const options = [
-        { value: 'selected', label: 'I agree the Terms and Conditions and the Privacy Policy', disabled: false },
-    ];
 
     function getClassName() {
         return classnames('aws-amplify-app-signup_container', className);
@@ -52,9 +47,9 @@ function SignUp(props) {
                 <SocialLogin />
                 <article className="aws-amplify-app-signup_inputs-container">
                     <Input
-                        label="Name"
+                        label="Username"
                         required
-                        placeholder="Enter your name"
+                        placeholder="Enter your username"
                         icon={<UserIcon />} />
                     <Input
                         label="Email Address"
@@ -68,10 +63,10 @@ function SignUp(props) {
                         required
                         icon={<LockIcon />} />
                     <Button variant="brand" label="Create Account" onClick={signup}/>
-                    <CheckboxGroup
-                        required
-                        options={options}
-                        className="aws-amplify-app-signup_checkbox" />
+                    <p className="aws-amplify-app-signup_terms-conditions">
+                        By creating an account you agree to our Terms and Conditions and our Privacy Policy.
+                    </p>
+
                     
                 </article>
             </Card>
