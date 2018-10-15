@@ -57,7 +57,7 @@ function SignIn(props) {
                             type="submit"
                             label="Login"
                         />
-                        <a href="/" className="aws-amplify-app-signin_link">
+                        <a href="/home/forgot-password" className="aws-amplify-app-signin_link">
                             Forgot your password?
                         </a>
                     </article>
