@@ -12,9 +12,10 @@ class AuthApp extends Component {
             className,
             style,
         } = props;
+        const name = props.user.getUsername ? props.user.getUsername() : props.user.name;
         return (
             <div className={className} style={style} >
-                Welcome {props.user.name}!
+                Welcome {name}!!
                 <Button label="Logout" onClick={props.logout} />
             </div>
         );
