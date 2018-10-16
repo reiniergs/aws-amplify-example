@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function UserIcon() {
+export default function User() {
     return (
         <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <g id="Authentication-signup-V1" transform="translate(-550.000000, -182.000000)">

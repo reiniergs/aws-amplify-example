@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const BackIcon = (props) => {
+const Back = (props) => {
     const { className } = props;
     return (
         <svg className={className} fill="#01B6F5" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -16,8 +16,8 @@ const BackIcon = (props) => {
     );
 }
 
-BackIcon.propTypes = {
+Back.propTypes = {
     className: PropTypes.string.isRequired,
 };
 
-export default BackIcon;
+export default Back;

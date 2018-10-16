@@ -8,9 +8,10 @@ import { reduxForm, Field } from 'redux-form';
 import Card from 'react-rainbow-components/components/Card';
 import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
-import UserIcon from './icons/userIcon';
-import LockIcon from './icons/lockIcon';
+import LockIcon from './../../../icons/lock/index.js';
+import UserIcon from './../../../icons/user/index.js';
 import SocialLogin from './../../../experiences/social-login';
+import Message from './../../../experiences/message';
 import './styles.css';
 import './media-queries.css';
 import login from './../../../../redux/actions/login';
@@ -29,6 +30,7 @@ function SignIn(props) {
 
     return (
         <form noValidate onSubmit={handleSubmit(login)}>
+            <Message />
             <section className={getClassName()} style={style}>
                 <Link to="/home">
                     <img src="/assets/rainbow-logo.svg" alt="rainbow logo" className="aws-amplify-app-signin_image" />

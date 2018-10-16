@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function LockIcon() {
+export default function Lock() {
     return (
         <svg width="13px" height="16px" viewBox="0 0 13 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <g transform="translate(-552.000000, -295.000000)" fill-rule="nonzero">

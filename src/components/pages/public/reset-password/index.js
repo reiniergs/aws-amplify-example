@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import Card from 'react-rainbow-components/components/Card';
 import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
-import LockIcon from './icons/lockIcon';
-import KeysIcon from './icons/keysIcon';
-import BackIcon from './icons/backIcon';
+import BackIcon from './../../../icons/back/index.js';
+import LockIcon from './../../../icons/lock/index.js';
+import KeysIcon from './../../../icons/keys/index.js';
 import './styles.css';
 import './media-queries.css';
 
