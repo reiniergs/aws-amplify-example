@@ -9,9 +9,9 @@ import Card from 'react-rainbow-components/components/Card';
 import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
 import SocialLogin from './../../../experiences/social-login';
-import EmailIcon from './icons/emailIcon';
-import LockIcon from './icons/lockIcon';
-import UserIcon from './icons/userIcon';
+import EmailIcon from './../../../icons/email/index.js';
+import LockIcon from './../../../icons/lock/index.js';
+import UserIcon from './../../../icons/user/index.js';
 import signup from './../../../../redux/actions/signup';
 import './styles.css';
 import './media-queries.css';
@@ -48,14 +48,14 @@ function SignUp(props) {
                             label="Username"
                             required
                             placeholder="Enter your username"
-                            icon={<UserIcon/>}/>
+                            icon={<UserIcon />}/>
                         <Field
                             component={Input}
                             name="email"
                             label="Email Address"
                             required
                             placeholder="Enter your email address"
-                            icon={<EmailIcon/>}/>
+                            icon={<EmailIcon />}/>
                         <Field
                             component={Input}
                             name="password"
@@ -63,7 +63,7 @@ function SignUp(props) {
                             placeholder="Enter your password"
                             type="password"
                             required
-                            icon={<LockIcon/>}/>
+                            icon={<LockIcon />}/>
                         <Button
                             variant="brand"
                             type="submit"

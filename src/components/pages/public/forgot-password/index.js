@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Card from 'react-rainbow-components/components/Card';
 import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
-import UserIcon from './icons/userIcon';
-import BackIcon from './icons/backIcon';
+import UserIcon from './../../../icons/user/index.js';
+import BackIcon from './../../../icons/back/index.js';
 import './styles.css';
 import './media-queries.css';
 

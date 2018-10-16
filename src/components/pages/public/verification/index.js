@@ -5,17 +5,17 @@ import {Link} from 'react-router-dom';
 import Card from 'react-rainbow-components/components/Card';
 import Button from 'react-rainbow-components/components/Button';
 import Input from 'react-rainbow-components/components/Input';
-import UserIcon from './icons/userIcon';
-import KeysIcon from './icons/keysIcon';
-import BackIcon from './icons/backIcon';
-import './styles.css';
-import './media-queries.css';
+import BackIcon from './../../../icons/back/index.js';
+import UserIcon from './../../../icons/user/index.js';
+import KeysIcon from './../../../icons/keys/index.js';
 import {Cache} from 'aws-amplify';
 import history from './../../../../history';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import verifyUser from './../../../../redux/actions/verify-user';
+import './styles.css';
+import './media-queries.css';
 
 class Verification extends Component {
     componentWillMount() {
@@ -88,7 +88,7 @@ const VerificationUI = reduxForm({ form: 'user-verification' })(
                                 label="Username"
                                 required
                                 disabled
-                                icon={<UserIcon/>}/>
+                                icon={<UserIcon />}/>
                             <Field
                                 component={Input}
                                 name="code"
@@ -96,7 +96,7 @@ const VerificationUI = reduxForm({ form: 'user-verification' })(
                                 placeholder="Enter the verification code"
                                 type="number"
                                 required
-                                icon={<KeysIcon/>}/>
+                                icon={<KeysIcon />}/>
                             <Button
                                 variant="brand"
                                 type="submit"
