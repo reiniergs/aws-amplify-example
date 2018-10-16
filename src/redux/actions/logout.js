@@ -6,7 +6,6 @@ export default function logout() {
         signout()
             .then(() => {
                 dispatch(unauthenticate());
-            })
-            .catch(() => {});
+            });
     }
 }

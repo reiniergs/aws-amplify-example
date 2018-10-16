@@ -1,6 +1,8 @@
 import authStateChanged from './../services/auth-state-changed';
 import { authenticate } from './authenticate';
 import { unauthenticate } from './unauthenticate';
+import history from './../../history';
+import hideErrorMessage from './hide-error-message';
 
 export const INIT_APP = 'INIT_APP';
 function initApp() {
@@ -12,6 +14,7 @@ function initApp() {
 export default function startApp() {
     return (dispatch) => {
         dispatch(initApp());
+
         authStateChanged()
             .then(user => {
                 dispatch(authenticate(user));
@@ -19,5 +22,9 @@ export default function startApp() {
             .catch(() => {
                 dispatch(unauthenticate())
             });
+
+        history.listen(() => {
+            dispatch(hideErrorMessage());
+        })
     }
 }

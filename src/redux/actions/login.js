@@ -1,5 +1,6 @@
 import signin from './../services/signin';
 import { authenticate } from './authenticate';
+import showErrorMessage from './show-error-message';
 
 export default function login(user) {
     return (dispatch) => {
@@ -8,7 +9,7 @@ export default function login(user) {
                 dispatch(authenticate(user))
             })
             .catch((error) => {
-                alert(error.message);
+                dispatch(showErrorMessage(error));
             })
     }
 }

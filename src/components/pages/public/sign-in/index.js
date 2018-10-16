@@ -11,7 +11,6 @@ import Input from 'react-rainbow-components/components/Input';
 import LockIcon from './../../../icons/lock/index.js';
 import UserIcon from './../../../icons/user/index.js';
 import SocialLogin from './../../../experiences/social-login';
-import Message from './../../../experiences/message';
 import './styles.css';
 import './media-queries.css';
 import login from './../../../../redux/actions/login';
@@ -30,7 +29,6 @@ function SignIn(props) {
 
     return (
         <form noValidate onSubmit={handleSubmit(login)}>
-            <Message />
             <section className={getClassName()} style={style}>
                 <Link to="/home">
                     <img src="/assets/rainbow-logo.svg" alt="rainbow logo" className="aws-amplify-app-signin_image" />
@@ -59,9 +57,9 @@ function SignIn(props) {
                             type="submit"
                             label="Login"
                         />
-                        <a href="/home/forgot-password" className="aws-amplify-app-signin_link">
+                        <Link to="/home/forgot-password" className="aws-amplify-app-signin_link">
                             Forgot your password?
-                        </a>
+                        </Link>
                     </article>
                 </Card>
                 <Link className="aws-amplify-app-signin_link" to="/home/signup">Sign up?</Link>

@@ -1,22 +1,22 @@
 import { Cache } from 'aws-amplify';
 import signup from './../services/signup';
 import history from './../../history';
-
+import showErrorMessage from './show-error-message';
 
 export default function signupAction(values) {
     return (dispatch) => {
         const { username, email } = values;
         signup(values)
             .then(() => {
-                const in10min = Date.now() + 5 * 60 * 1000;
+                const in10Min = Date.now() + 5 * 60 * 1000;
                 Cache.setItem('pendingVerificationUser', {
                     username,
                     email,
-                }, { expire: in10min });
+                }, { expires: in10Min });
                 history.push('/home/verification');
             })
             .catch((error) => {
-                alert(error.message);
+                dispatch(showErrorMessage(error));
             });
     }
 }

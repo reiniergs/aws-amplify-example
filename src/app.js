@@ -5,6 +5,7 @@ import Application from 'react-rainbow-components/components/Application';
 import startApp from './redux/actions/start-app';
 import InitializingApp from './components/experiences/initializing-app';
 import Routes from './routes';
+import Message from './components/experiences/message';
 
 class App extends Component {
     componentWillMount() {
@@ -22,6 +23,7 @@ class App extends Component {
         }
         return (
             <Application>
+                <Message />
                 <Routes isAuth={isAuth} />
             </Application>
         )
