@@ -8,19 +8,21 @@
 }
 
 .aws-amplify-app-message_content {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    max-width: 960px;
+    justify-content: space-between;
+    width: 960px;
 }
 
 .aws-amplify-app-message_text {
     color: #ffffff;
     padding: 0 16px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
+    flex-grow: 1;
 }
 
-.aws-amplify-app-message_icon, .aws-amplify-app-message_close-button {
+.aws-amplify-app-message_icon, .aws-amplify-app-message_close-button  {
     flex-shrink: 0;
 }

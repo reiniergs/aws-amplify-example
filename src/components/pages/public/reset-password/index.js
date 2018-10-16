@@ -61,7 +61,7 @@ class ResetPassword extends Component {
                                 <Field
                                     component={Input}
                                     name="newPassword"
-                                    label="Password"
+                                    label="New Password"
                                     type="password"
                                     required
                                     placeholder="Enter the new password"
