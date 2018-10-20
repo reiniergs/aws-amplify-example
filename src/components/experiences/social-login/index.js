@@ -38,7 +38,7 @@ const Federated = withFederated(SocialLoginUI);
 const federatedIds = {
     google_client_id: '324986215207-askmdchlagvi9r92anspcas9sp15l9ct.apps.googleusercontent.com',
     facebook_app_id: '947511325433571',
-    amazon_client_id: ''
+    amazon_client_id: 'amzn1.devportal.webapp.5e9ae7ce8d354631a251df71dd14446c',
 };
 
 function SocialLogin(props) {

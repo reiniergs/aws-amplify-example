@@ -127,6 +127,13 @@
 					"authSelections": "identityPoolAndUserPool"
 				}
 			}
+		},
+		"hostingS3AndCloudFront": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/awsamplifyweb-20181012190415-deployment/amplify-cfn-templates/hosting/template.json",
+				"Parameters": {}
+			}
 		}
 	},
 	"Outputs": {

@@ -1,6 +1,7 @@
 import signin from './../services/signin';
 import { authenticate } from './authenticate';
 import showErrorMessage from './show-error-message';
+import redirectToVerificationFlow from '../services/redirect-to-verification-flow';
 
 export default function login(user) {
     return (dispatch) => {
@@ -9,7 +10,11 @@ export default function login(user) {
                 dispatch(authenticate(user))
             })
             .catch((error) => {
-                dispatch(showErrorMessage(error));
+                if (error.code === 'UserNotConfirmedException') {
+                    redirectToVerificationFlow(user.username);
+                } else {
+                    dispatch(showErrorMessage(error));
+                }
             })
     }
 }

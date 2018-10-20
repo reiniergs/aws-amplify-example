@@ -80,7 +80,6 @@ const VerificationUI = reduxForm({ form: 'user-verification' })(
                         <article className="aws-amplify-app-verify-account_content">
                             <p className="aws-amplify-app-verify-account_message">
                                 We have sent you an code to your Email
-                                <strong> email@gmail.com </strong>
                             </p>
                             <Field
                                 component={Input}

@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/awsamplifyweb-20181012190415-deployment/amplify-cfn-templates/auth/cognito9ff81d74-cloudformation-template.yml",
 				"logicalId": "authcognito9ff81d74"
 			},
-			"lastPushTimeStamp": "2018-10-13T23:36:19.403Z",
+			"lastPushTimeStamp": "2018-10-20T05:59:42.673Z",
 			"output": {
 				"AppClientSecret": "1tg8iht5e299dcs9fsunu88daneuh5pi9snvtucf2hhgcdmk1tbd",
 				"UserPoolId": "us-east-1_4KO8zN0Yy",
@@ -30,6 +30,27 @@
 				"UserPoolName": "cognito9ff81d74_userpool_9ff81d74"
 			},
 			"lastPushDirHash": "5qQIxL3W4ezzoiRPqkb7ppWEtrI="
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/awsamplifyweb-20181012190415-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2018-10-20T05:59:42.675Z",
+			"output": {
+				"CloudFrontSecureURL": "https://dzjmxdfuuwmc6.cloudfront.net",
+				"S3BucketSecureURL": "https://aws-amplify-example.s3.amazonaws.com",
+				"WebsiteURL": "http://aws-amplify-example.s3-website-us-east-1.amazonaws.com",
+				"CloudFrontDistributionID": "E2NA0ZF0D6BWKW",
+				"Region": "us-east-1",
+				"HostingBucketName": "aws-amplify-example",
+				"CloudFrontDomainName": "dzjmxdfuuwmc6.cloudfront.net"
+			},
+			"lastPushDirHash": "6e0a/BBOIHBsopbVGOmQ0tJGuBE="
 		}
 	}
 }
