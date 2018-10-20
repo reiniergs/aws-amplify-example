@@ -1,1 +1,1 @@
-# aws-amplify-app
+# aws-amplify-example
